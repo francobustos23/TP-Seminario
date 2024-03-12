@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="texto">
+    <button onclick="ejecutar()">enviar</button>
+    <br><br>
+    <div id="message" style="color: red; background-color: yellow; width: max-content;"></div>
+    <!-- <label id="idtexto" style="display: none;">el texto</label> -->
+    <script>
+        function ejecutar() {    
+            let valorInput = document.getElementById('texto').value;
+            let message = document.getElementById('message');
+            if(valorInput === '') {
+                message.innerHTML = "Cargue algo por favor"
+            } else {
+                // document.getElementById('idtexto').style.display = "inline"
+                alert(valorInput)
+                document.getElementById('texto').value = ""
+            }
+        }
+    </script>
+</body>
+</html>
