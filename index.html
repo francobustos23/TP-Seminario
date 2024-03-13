@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body style="background-color: dimgrey;">
     <input type="text" id="texto">
-    <button onclick="ejecutar()">enviar</button>
+    <button onclick="ejecutar()" style="background-color: skyblue;">enviar</button>
     <br><br>
     <div id="message" style="color: red; background-color: yellow; width: max-content;"></div>
     <!-- <label id="idtexto" style="display: none;">el texto</label> -->
@@ -19,8 +19,10 @@
                 message.innerHTML = "Cargue algo por favor"
             } else {
                 // document.getElementById('idtexto').style.display = "inline"
-                alert(valorInput)
+                alert(`El texto dice: ${valorInput}`)
+                console.log(valorInput)
                 document.getElementById('texto').value = ""
+                message.innerHTML = ""
             }
         }
     </script>
