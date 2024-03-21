@@ -3,28 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Suma de Matrices</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body style="background-color: dimgrey;">
-    <input type="text" id="texto">
-    <button onclick="ejecutar()" style="background-color: skyblue;">enviar</button>
-    <br><br>
-    <div id="message" style="color: red; background-color: yellow; width: max-content;"></div>
-    <!-- <label id="idtexto" style="display: none;">el texto</label> -->
-    <script>
-        function ejecutar() {    
-            let valorInput = document.getElementById('texto').value;
-            let message = document.getElementById('message');
-            if(valorInput === '') {
-                message.innerHTML = "Cargue algo por favor"
-            } else {
-                // document.getElementById('idtexto').style.display = "inline"
-                alert(`El texto dice: ${valorInput}`)
-                console.log(valorInput)
-                document.getElementById('texto').value = ""
-                message.innerHTML = ""
-            }
-        }
-    </script>
+<body>
+    <h1>Suma de Matrices</h1>
+   <div class="bx1">
+    <label for="filas">Filas:</label>
+    <input type="number" id="filas" class="b">
+    <label for="columnas" class="b">Columnas:</label>
+    <input type="number" id="columnas" class="b">
+    <button onclick="crearMatrices()" class="b">Crear Matrices</button>
+   </div>
+
+    <div class="bx1">
+        <div id="matricesInput"></div>
+    </div>
+
+    <div class="a">
+        <button onclick="enviarMatrices()">Sumar Matrices</button>
+    </div>
+
+    <div id="resultado"></div>
+
+    <script src="matriz.js"></script>
 </body>
 </html>
